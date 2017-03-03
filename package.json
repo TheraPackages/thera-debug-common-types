@@ -1,0 +1,26 @@
+{
+  "name": "thera-debug-common-types",
+  "version": "0.1.1",
+  "description": "common types of thera debugger ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheraPackages/thera-debug-common-types.git"
+  },
+  "keywords": [
+    "thera",
+    "debug"
+  ],
+  "author": "NickolasHu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheraPackages/thera-debug-common-types/issues"
+  },
+  "homepage": "https://github.com/TheraPackages/thera-debug-common-types#readme",
+  "dependencies": {
+    "standard": "^9.0.0"
+  }
+}
