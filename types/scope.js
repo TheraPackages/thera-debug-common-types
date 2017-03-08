@@ -23,11 +23,11 @@ class Scope {
 // @properties. array[PropertyDescriptor]. properties of a given object
 //
 class RemoteObject {
-  constructor (type, className, value, id, hasChildren) {
+  constructor (type, className, value, objectId, hasChildren) {
     this.type = type
     this.className = className
     this.value = value
-    this.id = id
+    this.objectId = objectId
     this.hasChildren = hasChildren
   }
 
