@@ -86,6 +86,13 @@ class DebugService {
   destroy () {
     this.emitter.dispose()
   }
+
+  // https://chromedevtools.github.io/debugger-protocol-viewer/tot/Runtime/#method-getProperties
+  // @param objectId Identifier of the object to return properties for.
+  // @return array [ PropertyDescriptor ]
+  getProperties (objectId) {
+    return undefined
+  }
 }
 
 module.exports = DebugService

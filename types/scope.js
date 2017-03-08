@@ -30,6 +30,14 @@ class RemoteObject {
     this.id = id
     this.properties = properties
   }
+
+  isPrimitive () {
+    return this.type !== ObjectType.OBJECT && this.type !== ObjectType.FUNCTION
+  }
+
+  hasSubObject () {
+    return this.properties !== undefined && this.properties.length > 0
+  }
 }
 
 // https://chromedevtools.github.io/debugger-protocol-viewer/tot/Runtime/#type-PropertyDescriptor
@@ -44,8 +52,19 @@ class PropertyDescriptor {
   }
 }
 
+var ObjectType = Object.freeze({
+  OBJECT: 'object',
+  FUNCTION: 'function',
+  UNDEFINED: 'undefined',
+  STRING: 'string',
+  NUMBER: 'number',
+  BOOLEAN: 'boolean',
+  SYMBOL: 'symbol'
+})
+
 module.exports = {
   Scope: Scope,
   RemoteObject: RemoteObject,
-  PropertyDescriptor: PropertyDescriptor
+  PropertyDescriptor: PropertyDescriptor,
+  ObjectType: ObjectType
 }
