@@ -23,20 +23,16 @@ class Scope {
 // @properties. array[PropertyDescriptor]. properties of a given object
 //
 class RemoteObject {
-  constructor (type, className, value, id, properties) {
+  constructor (type, className, value, id, hasChildren) {
     this.type = type
     this.className = className
     this.value = value
     this.id = id
-    this.properties = properties
+    this.hasChildren = hasChildren
   }
 
   isPrimitive () {
     return this.type !== ObjectType.OBJECT && this.type !== ObjectType.FUNCTION
-  }
-
-  hasSubObject () {
-    return this.properties !== undefined && this.properties.length > 0
   }
 }
 

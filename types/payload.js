@@ -17,6 +17,16 @@ class CallStackPayload extends Payload {
   }
 }
 
+class CallFramePayload extends Payload {
+  constructor (id, functionName, scopeChain, location) {
+    super(COMMAND.CALLFRAME)
+    this.id = id
+    this.functionName = functionName
+    this.scopeChain = scopeChain
+    this.location = location
+  }
+}
+
 class ResolveBreakpointPayload extends Payload {
   constructor (breakpoint) {
     super(COMMAND.RESOLVE_BREAKPOINT)
@@ -32,19 +42,11 @@ class RemoveBreakpointPayload extends Payload {
   }
 }
 
-class UpdateScopePayload extends Payload {
-  // @scope tree of virable values of different scopes.
-  constructor (scope) {
-    super(COMMAND.UPDATE_SCOPE)
-    this.scope = scope
-  }
-}
-
 var COMMAND = Object.freeze({
   UPDATE_CALLSTACK: 'UPDATE_CALLSTACK',
   RESOLVE_BREAKPOINT: 'RESOLVE_BREAKPOINT',
   REMOVE_BREAKPOINT: 'REMOVE_BREAKPOINT',
-  UPDATE_SCOPE: 'UPDATE_SCOPE'
+  CALLFRAME: 'CALLFRAME'
 })
 
 module.exports = {
@@ -52,5 +54,5 @@ module.exports = {
   CallStackPayload: CallStackPayload,
   ResolveBreakpointPayload: ResolveBreakpointPayload,
   RemoveBreakpointPayload: RemoveBreakpointPayload,
-  UpdateScopePayload: UpdateScopePayload
+  CallFramePayload: CallFramePayload
 }
