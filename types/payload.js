@@ -42,11 +42,22 @@ class RemoveBreakpointPayload extends Payload {
   }
 }
 
+class SourceCodePayload extends Payload {
+  constructor (sourceURL, localURL, isRemote, content) {
+    super(COMMAND.ADD_SOURCECODE)
+    this.sourceURL = sourceURL;
+    this.localURL = localURL;
+    this.isRemote = isRemote;
+    this.content = content;
+  }
+}
+
 var COMMAND = Object.freeze({
   UPDATE_CALLSTACK: 'UPDATE_CALLSTACK',
   RESOLVE_BREAKPOINT: 'RESOLVE_BREAKPOINT',
   REMOVE_BREAKPOINT: 'REMOVE_BREAKPOINT',
-  CALLFRAME: 'CALLFRAME'
+  CALLFRAME: 'CALLFRAME',
+  ADD_SOURCECODE: "ADD_SOURCECODE"
 })
 
 module.exports = {
@@ -54,5 +65,6 @@ module.exports = {
   CallStackPayload: CallStackPayload,
   ResolveBreakpointPayload: ResolveBreakpointPayload,
   RemoveBreakpointPayload: RemoveBreakpointPayload,
-  CallFramePayload: CallFramePayload
+  CallFramePayload: CallFramePayload,
+  SourceCodePayload: SourceCodePayload
 }
