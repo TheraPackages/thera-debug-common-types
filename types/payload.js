@@ -74,5 +74,6 @@ module.exports = {
   ResolveBreakpointPayload: ResolveBreakpointPayload,
   RemoveBreakpointPayload: RemoveBreakpointPayload,
   CallFramePayload: CallFramePayload,
-  SourceCodePayload: SourceCodePayload
+  SourceCodePayload: SourceCodePayload,
+  ResumedPayload: ResumedPayload
 }
