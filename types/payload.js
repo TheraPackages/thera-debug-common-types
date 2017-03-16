@@ -52,12 +52,20 @@ class SourceCodePayload extends Payload {
   }
 }
 
+class ResumedPayload extends Payload {
+  constructor() {
+    super(COMMAND.DEBUGGER_RESUMED);
+    // Empty Payload
+  }
+}
+
 var COMMAND = Object.freeze({
   UPDATE_CALLSTACK: 'UPDATE_CALLSTACK',
   RESOLVE_BREAKPOINT: 'RESOLVE_BREAKPOINT',
   REMOVE_BREAKPOINT: 'REMOVE_BREAKPOINT',
   CALLFRAME: 'CALLFRAME',
-  ADD_SOURCECODE: "ADD_SOURCECODE"
+  ADD_SOURCECODE: "ADD_SOURCECODE",
+  DEBUGGER_RESUMED: "DEBUGGER_RESUMED"
 })
 
 module.exports = {
