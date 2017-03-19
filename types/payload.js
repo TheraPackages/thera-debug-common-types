@@ -45,16 +45,16 @@ class RemoveBreakpointPayload extends Payload {
 class SourceCodePayload extends Payload {
   constructor (sourceURL, localURL, isRemote, content) {
     super(COMMAND.ADD_SOURCECODE)
-    this.sourceURL = sourceURL;
-    this.localURL = localURL;
-    this.isRemote = isRemote;
-    this.content = content;
+    this.sourceURL = sourceURL
+    this.localURL = localURL
+    this.isRemote = isRemote
+    this.content = content
   }
 }
 
 class ResumedPayload extends Payload {
-  constructor() {
-    super(COMMAND.DEBUGGER_RESUMED);
+  constructor () {
+    super(COMMAND.DEBUGGER_RESUMED)
     // Empty Payload
   }
 }
@@ -64,8 +64,8 @@ var COMMAND = Object.freeze({
   RESOLVE_BREAKPOINT: 'RESOLVE_BREAKPOINT',
   REMOVE_BREAKPOINT: 'REMOVE_BREAKPOINT',
   CALLFRAME: 'CALLFRAME',
-  ADD_SOURCECODE: "ADD_SOURCECODE",
-  DEBUGGER_RESUMED: "DEBUGGER_RESUMED"
+  ADD_SOURCECODE: 'ADD_SOURCECODE',
+  DEBUGGER_RESUMED: 'DEBUGGER_RESUMED'
 })
 
 module.exports = {
