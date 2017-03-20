@@ -18,12 +18,13 @@ class CallStackPayload extends Payload {
 }
 
 class CallFramePayload extends Payload {
-  constructor (id, functionName, scopeChain, location) {
+  constructor (id, functionName, scopeChain, location, thisObject) {
     super(COMMAND.CALLFRAME)
     this.id = id
     this.functionName = functionName
     this.scopeChain = scopeChain
     this.location = location
+    this.thisObject = thisObject
   }
 }
 
