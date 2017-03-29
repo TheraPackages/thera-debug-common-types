@@ -26,6 +26,11 @@ class DebugService {
     console.log(`removeBreakpoint`)
   }
 
+  // @param breakpoints. array keep all breakpoints
+  setBreakPointReference (breakpoints) {
+    this.breakpoints = breakpoints
+  }
+
   // debug control
   startDebug (entranceURL) {
     console.log(`startDebug on url ${entranceURL}`)
