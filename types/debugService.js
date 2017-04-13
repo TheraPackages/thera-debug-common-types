@@ -26,9 +26,10 @@ class DebugService {
     console.log(`removeBreakpoint`)
   }
 
-  // @param breakpoints. array keep all breakpoints
-  setBreakPointReference (breakpoints) {
-    this.breakpoints = breakpoints
+  // Sync all breakpoints to service
+  // @param breakpoints. an array of @type Breakpoint in thera-debug-common-types
+  syncAllBreakPoints (breakpoints) {
+    console.log('syncAllBreakPoints')
   }
 
   // debug control

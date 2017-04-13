@@ -1,6 +1,6 @@
 {
   "name": "thera-debug-common-types",
-  "version": "0.1.8",
+  "version": "0.2.1",
   "description": "common types of thera debugger ",
   "main": "index.js",
   "scripts": {
