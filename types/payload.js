@@ -60,13 +60,28 @@ class ResumedPayload extends Payload {
   }
 }
 
+class StartPayload extends Payload {
+  constructor () {
+    super(COMMAND.DEBUGGER_STARTED)
+  }
+}
+
+class StopPayload extends Payload {
+  constructor () {
+    super(COMMAND.DEBUGGER_STOPPED)
+    // Empty Payload
+  }
+}
+
 var COMMAND = Object.freeze({
   UPDATE_CALLSTACK: 'UPDATE_CALLSTACK',
   RESOLVE_BREAKPOINT: 'RESOLVE_BREAKPOINT',
   REMOVE_BREAKPOINT: 'REMOVE_BREAKPOINT',
   CALLFRAME: 'CALLFRAME',
   ADD_SOURCECODE: 'ADD_SOURCECODE',
-  DEBUGGER_RESUMED: 'DEBUGGER_RESUMED'
+  DEBUGGER_RESUMED: 'DEBUGGER_RESUMED',
+  DEBUGGER_STARTED: 'DEBUGGER_STARTED',
+  DEBUGGER_STOPPED: 'DEBUGGER_STOPPED'
 })
 
 module.exports = {
