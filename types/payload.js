@@ -60,13 +60,13 @@ class ResumedPayload extends Payload {
   }
 }
 
-class StartPayload extends Payload {
+class StartedPayload extends Payload {
   constructor () {
     super(COMMAND.DEBUGGER_STARTED)
   }
 }
 
-class StopPayload extends Payload {
+class StoppedPayload extends Payload {
   constructor () {
     super(COMMAND.DEBUGGER_STOPPED)
     // Empty Payload
@@ -91,5 +91,7 @@ module.exports = {
   RemoveBreakpointPayload: RemoveBreakpointPayload,
   CallFramePayload: CallFramePayload,
   SourceCodePayload: SourceCodePayload,
-  ResumedPayload: ResumedPayload
+  ResumedPayload: ResumedPayload,
+  StartedPayload: StartedPayload,
+  StoppedPayload: StoppedPayload
 }
