@@ -28,7 +28,7 @@ class DebugService {
 
   // Sync all breakpoints to service
   // @param breakpoints. an array of @type Breakpoint in thera-debug-common-types
-  syncAllBreakPoints (breakpoints) {
+  syncAllBreakpoints (breakpoints) {
     console.log('syncAllBreakPoints')
   }
 
